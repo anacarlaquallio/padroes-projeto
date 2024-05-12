@@ -30,7 +30,7 @@ Para o exemplo, considere o contexto da construção de um objeto `Star`, com at
     - `Main`: Contém o código de exemplo para demonstrar como usar o padrão de projeto *Builder* para construir uma estrela.
 
 O código de exemplo encontra-se [https://github.com/anacarlaquallio/padroes-projeto/tree/main/builder](https://github.com/anacarlaquallio/principios-solid/blob/main/inversaoDependencia/correto/Main.java) e a figura abaixo mostra o diagrama UML das classes descritas anteriormente.
-![Diagrama UML - Builder](image.png)
+![Diagrama UML - Builder](builder/diagrama-builder.png)
 
 ## 📝 Decorator (estrutural)
 
