@@ -24,11 +24,15 @@ O padrão *Builder* sugere a exttração do código de construção do objeto pa
 ### Exemplo
 Para o exemplo, considere o contexto da construção de um objeto `Star`, com atributos como nome, luminosidade, temperatura e massa. Com o padrão de projeto *Builder*, podemos separar a construção de uma estrela em passos individuais e fornecer métodos para configurar cada atributo separadamente. Nesse sentido, temos as classes:
 
-    - `Star`: Representa a estrela que queremos construir, com atributos como nome, luminosidade, temperatura e massa;
-    - `StarBuilder`: Define a interface para a construção de uma estrela. Contém métodos para definir os atributos.
-    - `StarBuilderImpl`: Implementa a interface StarBuilder. Responsável por construir a estrela, fornecendo métodos para configurar os atributos da estrela;
-    - `StarDirector`: Coordena o processo de construção da estrela. Recebe um StarBuilder e utiliza-o para construir uma estrela conforme uma sequência de passos;
-    - `Main`: Contém o código de exemplo para demonstrar como usar o padrão de projeto *Builder* para construir uma estrela.
+- **`Star`**: Representa a estrela que queremos construir, com atributos como nome, luminosidade, temperatura e massa.
+
+- **`StarBuilder`**: Define a interface para a construção de uma estrela. Contém métodos para definir os atributos.
+
+- **`StarBuilderImpl`**: Implementa a interface `StarBuilder`. Responsável por construir a estrela, fornecendo métodos para configurar os atributos da estrela.
+
+- **`StarDirector`**: Coordena o processo de construção da estrela. Recebe um `StarBuilder` e utiliza-o para construir uma estrela conforme uma sequência de passos.
+
+- **`Main`**: Contém o código de exemplo para demonstrar como usar o padrão de projeto Builder para construir uma estrela.
 
 O código de exemplo encontra-se [https://github.com/anacarlaquallio/padroes-projeto/tree/main/builder](https://github.com/anacarlaquallio/principios-solid/blob/main/inversaoDependencia/correto/Main.java) e a figura abaixo mostra o diagrama UML das classes descritas anteriormente.
 
