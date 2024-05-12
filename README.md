@@ -19,7 +19,7 @@ O padrão de projeto *Builder* é uma técnica que permite a construção de obj
 Imagine um objeto complexo que necessite de uma inicialização passo a passo de muitos campos e objetos. É preciso de um construtor monstruoso com vários parâmetros, aumentando o acoplamento do código (métrica CBO).
 
 ### Solução
-O padrão *Builder* sugere a exttração do código de construção do objeto para fora de sua própria classe e mova ele para objetos separados chamados *builders*. Estruturalmente, temos o *diretor*, que define a ordem na qual executar as etapas de construção, e o *builder*, que provê a implementação dessas etapas.
+O padrão *Builder* sugere a extração do código de construção do objeto para fora de sua própria classe e mova ele para objetos separados chamados *builders*. Estruturalmente, temos o *diretor*, que define a ordem na qual executar as etapas de construção, e o *builder*, que provê a implementação dessas etapas.
 
 ### Exemplo
 Para o exemplo, considere o contexto da construção de um objeto `Star`, com atributos como nome, luminosidade, temperatura e massa. Com o padrão de projeto *Builder*, podemos separar a construção de uma estrela em passos individuais e fornecer métodos para configurar cada atributo separadamente. Nesse sentido, temos as classes:
@@ -70,6 +70,33 @@ O código de exemplo encontra-se [aqui](https://github.com/anacarlaquallio/padro
 
 ## 📝 Observer (comportamental)
 
+### Propósito
+O padrão de projeto *Observer* permite a definição de um mecanismo de assinatura para notificar múltiplos objetos sobre quaisquer eventos que aconteçam com o objeto que eles estão observando.
+
+### Problema
+Em sistemas onde há objetos que precisam ser notificados sobre mudanças de estado de outros objetos, a implementação direta dessa funcionalidade pode resultar em um acoplamento excessivo entre os observadores e os objetos observados. Os objetos observados, por sua vez, mantêm uma lista de seus observadores e notificam todos eles quando seu estado é alterado.
+
+### Solução
+O padrão *Observer* propõe a criação de uma estrutura na qual os objetos observadores se registram para receber notificações sobre mudanças de estado dos objetos observados.
+
+### Exemplo
+Para o exemplo, considere o contexto de sondas espaciais. Para criar uma aplicação que monitore eventos espaciais, podemos utilizar o padrão de projeto *Observer*, diante das classes:
+
+- **`SpaceProbe`**: Representa uma sonda espacial que é o objeto observado;
+
+- **`Observer`**: Interface que define o contrato para todos os observadores;
+
+- **`Subject`**: Interface que define o contrato para todos os sujeitos (objetos observados);
+
+- **`SpaceAgency`**: Classe que representa um observador concreto, no caso uma agência espacial;
+
+- **`CelestialBody`**: Classe que representa um corpo celeste genérico;
+
+- **`Main`**: Exemplifica o uso do padrão *Observer* para notificar observadores sobre mudanças no estado da sonda espacial.
+
+O código de exemplo encontra-se [aqui](https://github.com/anacarlaquallio/padroes-projeto/tree/main/observer) e a figura abaixo mostra o diagrama UML das classes descritas anteriormente.
+
+![Diagrama UML - Observer](observer/diagrama-observer.png)
 
 ### 📚 Bibliografia
 
