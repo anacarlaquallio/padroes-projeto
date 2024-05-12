@@ -11,7 +11,7 @@ Nesse sentido, os padrões de projeto podem ser classificados como:
 
 Para este trabalho, foram escolhidos 3 padrões de cada categoria, a saber: *Builder (padrão criacional)*; *Decorator (estrutural)* e *Observer (comportamental)*. Além disso, para cada um, foram desenvolvidos exemplos de código na linguagem de programação Java. Vejamos os padrões escolhidos.
 
-## 📝 Builder (crioacional)
+## 📝 Builder (criacional)
 ### Propósito
 O padrão de projeto *Builder* é uma técnica que permite a construção de objetos complexos passo a passo. Uma analogia pode ser feita: assim como a construção de uma casa, onde cada etapa é executada gradualmente - desde o projeto arquitetural, passando pela preparação do terreno, estrutura, até as paredes, telhado e acabamentos - o *Builder* nos permite construir objetos de forma incremental, controlando cada aspecto do processo.
 
@@ -34,12 +34,35 @@ Para o exemplo, considere o contexto da construção de um objeto `Star`, com at
 
 - **`Main`**: Contém o código de exemplo para demonstrar como usar o padrão de projeto Builder para construir uma estrela.
 
-O código de exemplo encontra-se [https://github.com/anacarlaquallio/padroes-projeto/tree/main/builder](https://github.com/anacarlaquallio/principios-solid/blob/main/inversaoDependencia/correto/Main.java) e a figura abaixo mostra o diagrama UML das classes descritas anteriormente.
+O código de exemplo encontra-se [aqui](https://github.com/anacarlaquallio/padroes-projeto/tree/main/builder) e a figura abaixo mostra o diagrama UML das classes descritas anteriormente.
 
 ![Diagrama UML - Builder](builder/diagrama-builder.png)
 
 ## 📝 Decorator (estrutural)
 
+### Propósito
+O padrão de projeto *Decorator* permite adicionar comportamentos adicionais a objetos dinamicamente. Ele é útil quando é preciso estender o comportamento de um objeto sem alterar sua estrutura básica.
+
+### Problema
+Suponha que estamos lidando com objetos complexos que precisam de funcionalidades adicionais. A adição dessas funcionalidades através da herança de classes pode se tornar impraticável e a criação de subclasses para cada combinação de funcionalidades resultaria em uma hierarquia de classes inflexível. 
+
+### Solução
+O padrão *Decorator* sugere encapsular o objeto original em uma série de objetos decoradores, cada um adicionando responsabilidades adicionais sem afetar a estrutura do objeto original. Estruturalmente, o padrão *Decorator* consiste em um componente base que define a interface para os objetos que podem ser decorados, decoradores concretos que adicionam funcionalidades adicionais e um cliente que utiliza os objetos decorados.
+
+### Exemplo
+Para o exemplo, considere o contexto da série Cosmos, de Carl Sagan, disponível no [YouTube](https://youtube.com/playlist?list=PLWTsw1mh-VO-MONi88PiY6KstvIxw0Hcj&si=UXhOzgKUKpN_tTyq). Para criar uma aplicação que permite visualizar informações sobre os episódios da série, vamos criar um *decorator* para adicionar funcionalidades de legendas em diferentes idiomas aos episódios, com as classes:
+
+- **`Episode`**: Interface que define o componente base que representa um episódio da série "Cosmos";
+
+- **`CosmosEpisode`**: Implementação concreta da interface `Episode`. Representa um episódio específico da série "Cosmos";
+
+- **`SubtitleDecorator`**: Classe abstrata que serve como base para todos os decoradores de legendas;
+
+- **`PortugueseSubtitle`**: Implementação concreta do decorador para legendas em português;
+
+- **`SpanishSubtitle`**: Implementação concreta do decorador de legendas para legendas em espanhol;
+
+- **`Main`**: Cria instâncias de episódios e aplica os decoradores para adicionar legendas em português e espanhol.
 
 ## 📝 Observer (comportamental)
 
