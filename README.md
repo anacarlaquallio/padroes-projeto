@@ -64,6 +64,10 @@ Para o exemplo, considere o contexto da série Cosmos, de Carl Sagan, disponíve
 
 - **`Main`**: Cria instâncias de episódios e aplica os decoradores para adicionar legendas em português e espanhol.
 
+O código de exemplo encontra-se [aqui](https://github.com/anacarlaquallio/padroes-projeto/tree/main/decorator) e a figura abaixo mostra o diagrama UML das classes descritas anteriormente.
+
+![Diagrama UML - Decorator](decorator/diagrama-decorator.png)
+
 ## 📝 Observer (comportamental)
 
 
