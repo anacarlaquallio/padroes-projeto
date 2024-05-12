@@ -50,11 +50,11 @@ Suponha que estamos lidando com objetos complexos que precisam de funcionalidade
 O padrão *Decorator* sugere encapsular o objeto original em uma série de objetos decoradores, cada um adicionando responsabilidades adicionais sem afetar a estrutura do objeto original. Estruturalmente, o padrão *Decorator* consiste em um componente base que define a interface para os objetos que podem ser decorados, decoradores concretos que adicionam funcionalidades adicionais e um cliente que utiliza os objetos decorados.
 
 ### Exemplo
-Para o exemplo, considere o contexto da série Cosmos, de Carl Sagan, disponível no [YouTube](https://youtube.com/playlist?list=PLWTsw1mh-VO-MONi88PiY6KstvIxw0Hcj&si=UXhOzgKUKpN_tTyq). Para criar uma aplicação que permite visualizar informações sobre os episódios da série, vamos criar um *decorator* para adicionar funcionalidades de legendas em diferentes idiomas aos episódios, com as classes:
+Para o exemplo, considere o contexto da série *Cosmos*, de Carl Sagan, disponível no [YouTube](https://youtube.com/playlist?list=PLWTsw1mh-VO-MONi88PiY6KstvIxw0Hcj&si=UXhOzgKUKpN_tTyq). Para criar uma aplicação que permite visualizar informações sobre os episódios da série, vamos criar um *decorator* para adicionar funcionalidades de legendas em diferentes idiomas aos episódios, com as classes:
 
-- **`Episode`**: Interface que define o componente base que representa um episódio da série "Cosmos";
+- **`Episode`**: Interface que define o componente base que representa um episódio da série *Cosmos*;
 
-- **`CosmosEpisode`**: Implementação concreta da interface `Episode`. Representa um episódio específico da série "Cosmos";
+- **`CosmosEpisode`**: Implementação concreta da interface `Episode`. Representa um episódio específico da série *Cosmos"*;
 
 - **`SubtitleDecorator`**: Classe abstrata que serve como base para todos os decoradores de legendas;
 
